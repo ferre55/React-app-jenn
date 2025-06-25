@@ -1,15 +1,18 @@
+import {Routes, Route} from 'react-router-dom'
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
+import Owner from './pages/Owner';
 import "./App.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Menu from "./components/Menu";
 
 export default function App() {
   return (
-    <div className="container">
-      <Header />
-      <Menu />
-      <Footer />
-    </div>
+    <>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/Owner" element={<Owner/>} />
+      </Routes>
+    </>
   );
 }
 
